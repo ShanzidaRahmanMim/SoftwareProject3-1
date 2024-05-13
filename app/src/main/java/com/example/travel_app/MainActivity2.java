@@ -30,7 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         mAuth=FirebaseAuth.getInstance();
-        sharedPreferencesManager = new SharedPreferencesManager(this);
+        sharedPreferencesManager = SharedPreferencesManager.getInstance(this);
         button1=findViewById(R.id.button1);
         email1=findViewById(R.id.editText1);
         password1=findViewById(R.id.password1);
@@ -55,7 +55,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         if (sharedPreferencesManager.isLoggedIn()) {
             // User is logged in, navigate to the home screen
-            Intent intent = new Intent(MainActivity2.this, Home_activity.class);
+            Intent intent = new Intent(MainActivity2.this, HomeActivity.class);
             startActivity(intent);
             finish();
         }
@@ -92,7 +92,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
 
-                    Intent intent3=new Intent(MainActivity2.this, Home_activity.class);
+                    Intent intent3=new Intent(MainActivity2.this, HomeActivity.class);
                     intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent3);
 

@@ -14,9 +14,6 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity3 extends AppCompatActivity {
 
@@ -88,7 +85,7 @@ public class MainActivity3 extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "Register Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent3 = new Intent(MainActivity3.this, Home_activity.class);
+                    Intent intent3 = new Intent(MainActivity3.this, HomeActivity.class);
                     startActivity(intent3);
                 } else {
                     Toast.makeText(getApplicationContext(), "Register Unsuccessful", Toast.LENGTH_SHORT).show();
