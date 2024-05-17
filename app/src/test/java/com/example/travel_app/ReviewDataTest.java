@@ -39,4 +39,4 @@ public class ReviewDataTest {
         // Assert that the empty string is correctly handled
         assertEquals("", review.getComment(), "Comment should be empty");
     }
-}
+
