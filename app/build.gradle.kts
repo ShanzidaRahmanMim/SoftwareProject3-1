@@ -39,6 +39,11 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-auth:22.2.0")
     implementation("com.google.firebase:firebase-database:20.3.0")
+//    implementation(fileTree(mapOf(
+//        "dir" to "C:\\Users\\ASUS\\AppData\\Local\\Android\\Sdk\\platforms\\android-34",
+//        "include" to listOf("*.aar", "*.jar"),
+//        "exclude" to listOf()
+//    )))
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -49,6 +54,7 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.google.gms:google-services:4.3.10") // Check for the latest version
     testImplementation("junit:junit:4.13.2")
+    testImplementation("hamcrest-core-1.3.jar")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
