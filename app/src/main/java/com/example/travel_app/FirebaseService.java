@@ -9,9 +9,15 @@ public class FirebaseService {
     private FirebaseAuth mAuth;
     private DatabaseReference databaseReference;
 
+    // Private constructor for normal usage
     private FirebaseService() {
-        mAuth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference("info");
+        this(FirebaseAuth.getInstance(), FirebaseDatabase.getInstance().getReference("info"));
+    }
+
+    // Package-private constructor for testing
+    FirebaseService(FirebaseAuth mAuth, DatabaseReference databaseReference) {
+        this.mAuth = mAuth;
+        this.databaseReference = databaseReference;
     }
 
     public static synchronized FirebaseService getInstance() {
@@ -29,4 +35,3 @@ public class FirebaseService {
         return databaseReference;
     }
 }
-
