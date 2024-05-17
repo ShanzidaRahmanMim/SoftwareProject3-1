@@ -29,6 +29,9 @@
             android:name=".DetailActivity"
             android:exported="false" />
         <activity
+            android:name=".details"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
@@ -37,9 +40,18 @@
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
+
+        <activity
+            android:name=".googleMap"
+            android:exported="false"/>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
