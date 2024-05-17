@@ -24,7 +24,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class ReviewActivity extends AppCompatActivity {
+public class ReviewActivity extends AppCompatActivity implements ReviewView {
     Button submitButton;
     RatingBar ratingBar;
     EditText commentEditText;
@@ -35,24 +35,14 @@ public class ReviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
         EdgeToEdge.enable(this);
+        setupWindowInsets();
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.reviewLayout), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-//        private void setupWindowInsets() {
-//            View reviewLayout = findViewById(R.id.reviewLayout);
-//            if (reviewLayout != null) {
-//                ViewCompat.setOnApplyWindowInsetsListener(reviewLayout, (view, insets) -> {
-//                    Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//                    view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//                    return insets;
-//                });
-//            } else {
-//                Toast.makeText(this, "Review Layout is not found!", Toast.LENGTH_SHORT).show();
-//            }
-//        }
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.reviewLayout), (v, insets) -> {
+//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+//            return insets;
+//        });
+
 
 
         ratingBar = findViewById(R.id.ratingBar);
@@ -60,6 +50,8 @@ public class ReviewActivity extends AppCompatActivity {
         submitButton = findViewById(R.id.submitButton);
         imageView=findViewById(R.id.backgroundImage);
         presenter = ReviewPresenter.getInstance(this);
+        presenter.attachView(this);
+        //presenter.attachView((ReviewView) this);
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,5 +63,24 @@ public class ReviewActivity extends AppCompatActivity {
         });
 
         presenter.loadReviewData();
+    }
+    private void setupWindowInsets() {
+        View reviewLayout = findViewById(R.id.reviewLayout);
+        if (reviewLayout != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(reviewLayout, (view, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+                return insets;
+            });
+        } else {
+            Toast.makeText(this, "Review Layout is not found!", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void displayReviewData(float rating, String comment) {
+        ratingBar.setRating(rating);
+        commentEditText.setText(comment);
+    }
+    public void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
