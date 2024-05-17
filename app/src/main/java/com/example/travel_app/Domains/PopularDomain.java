@@ -1,6 +1,11 @@
 package com.example.travel_app.Domains;
 import java.io.Serializable;
 
+
+
+
+import java.io.Serializable;
+
 public class PopularDomain implements Serializable {
     private String title;
     private String location;
@@ -96,5 +101,3 @@ public class PopularDomain implements Serializable {
         this.price = price;
     }
 }
-
-
