@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"com.example.travel_app","c":"Info","l":"Info()","u":"%3Cinit%3E()"},{"p":"com.example.travel_app","c":"Info","l":"Info(String, String)","u":"%3Cinit%3E(java.lang.String,java.lang.String)"},{"p":"com.example.travel_app","c":"Info","l":"namee"},{"p":"com.example.travel_app","c":"Info","l":"phonee"}];updateSearchResults();
