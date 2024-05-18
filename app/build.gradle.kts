@@ -43,6 +43,7 @@ dependencies {
     implementation("junit:junit:4.12")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
+    androidTestImplementation("org.testng:testng:6.9.6")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
     testImplementation ("junit:junit:4.13.2")
     testImplementation("org.hamcrest:hamcrest-core:1.3")
