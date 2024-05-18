@@ -40,11 +40,7 @@ dependencies {
     implementation("com.google.firebase:firebase-database:20.3.0")
     implementation("com.android.volley:volley:1.2.1")
     implementation("com.github.bumptech.glide:glide:4.16.0")
-//    implementation(fileTree(mapOf(
-//        "dir" to "C:\\Users\\ASUS\\AppData\\Local\\Android\\Sdk\\platforms\\android-34",
-//        "include" to listOf("*.aar", "*.jar"),
-//        "exclude" to listOf()
-//    )))
+    implementation("junit:junit:4.12")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
@@ -56,4 +52,10 @@ dependencies {
     androidTestImplementation("org.mockito:mockito-android:3.+")
     implementation("com.google.gms:google-services:4.3.10")
     implementation("androidx.multidex:multidex:2.0.1")
+    androidTestImplementation ("androidx.test:runner:1.4.0")
+    androidTestImplementation ("androidx.test:rules:1.4.0")
+    androidTestImplementation("com.google.firebase:firebase-auth:20.0.3")
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.4.0")
+
+
 }

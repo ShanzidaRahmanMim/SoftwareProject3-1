@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.travel_app.Domains.PopularDomain;
 
+import org.junit.runner.RunWith;
+
 
 public class DetailActivity extends AppCompatActivity {
     private TextView titleTxt,locationTxt,descriptionTxt,scoreTxt;
