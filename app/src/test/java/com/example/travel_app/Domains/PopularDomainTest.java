@@ -65,6 +65,48 @@ public class PopularDomainTest {
     public void testIsGuide() {
         assertTrue(popularDomain.isGuide());
     }
+      @Test
+    public void testGetScore() {
+        assertEquals(9.5, popularDomain.getScore(), 0.0);
+    }
 
+    @Test
+    public void testSetScore() {
+        popularDomain.setScore(8.7);
+        assertEquals(8.7, popularDomain.getScore(), 0.0);
+    }
+
+    @Test
+    public void testGetPic() {
+        assertEquals("beach_resort.jpg", popularDomain.getPic());
+    }
+
+    @Test
+    public void testSetPic() {
+        popularDomain.setPic("mountain_resort.jpg");
+        assertEquals("mountain_resort.jpg", popularDomain.getPic());
+    }
+
+    @Test
+    public void testIsWifi() {
+        assertTrue(popularDomain.isWifi());
+    }
+
+    @Test
+    public void testSetWifi() {
+        popularDomain.setWifi(false);
+        assertEquals(false, popularDomain.isWifi());
+    }
+
+    @Test
+    public void testGetPrice() {
+        assertEquals(500, popularDomain.getPrice());
+    }
+
+    @Test
+    public void testSetPrice() {
+        popularDomain.setPrice(700);
+        assertEquals(700, popularDomain.getPrice());
+    }
 
 }
