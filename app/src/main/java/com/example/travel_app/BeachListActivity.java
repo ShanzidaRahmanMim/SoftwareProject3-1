@@ -28,6 +28,7 @@ import com.example.travel_app.R;
 
 import java.util.ArrayList;
 
+
 public class BeachListActivity extends AppCompatActivity {
     private TextView Category ;
     private ListView listView;
