@@ -4,8 +4,9 @@ import java.io.Serializable;
 
 /**
  * A class representing popular travel destinations.
+ * @author samiha
  */
-//@author samiha
+
 public class PopularDomain implements Serializable {
     private String title;
     private String location;

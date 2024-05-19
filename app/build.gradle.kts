@@ -15,6 +15,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -30,6 +31,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {
@@ -41,6 +43,7 @@ dependencies {
     implementation("com.android.volley:volley:1.2.1")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("junit:junit:4.12")
+    implementation("androidx.test.espresso:espresso-contrib:3.5.1")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
     androidTestImplementation("org.testng:testng:6.9.6")
@@ -57,6 +60,11 @@ dependencies {
     androidTestImplementation ("androidx.test:rules:1.4.0")
     androidTestImplementation("com.google.firebase:firebase-auth:20.0.3")
     androidTestImplementation("androidx.test.espresso:espresso-intents:3.4.0")
+    androidTestImplementation ("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
+    androidTestImplementation ("androidx.test.espresso:espresso-intents:3.3.0")
+    androidTestImplementation ("androidx.test.espresso:espresso-contrib:3.4.0")
+    androidTestImplementation ("androidx.test:core:1.4.0")
 
 
 }
