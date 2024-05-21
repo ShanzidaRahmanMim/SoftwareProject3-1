@@ -70,7 +70,7 @@ public class HomeActivity extends AppCompatActivity {
         int[] images = {R.drawable.beach_1, R.drawable.mountain_1, R.drawable.forest, R.drawable.traveller, R.drawable.beach};
         String[] texts = {"Beaches", "Mountains", "Forest", "Tourist Places", "Island"};
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        com.example.travel_app.Activities.ImageListAdapter adapter = new com.example.travel_app.Activities.ImageListAdapter(this, images,texts);
+        com.example.travel_app.ImageListAdapter adapter = new com.example.travel_app.ImageListAdapter(this, images,texts);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 

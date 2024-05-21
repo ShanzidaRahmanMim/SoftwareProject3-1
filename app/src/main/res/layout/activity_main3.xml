@@ -18,7 +18,7 @@
         android:textColor="@color/black"
         android:paddingTop="100sp"
 
-        />
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editText2"
@@ -27,6 +27,7 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="text"
+        android:minHeight="48dp"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +42,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Password"
-        android:textColorHint="@color/black"
         android:inputType="numberPassword"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -68,8 +70,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Name"
-        android:textColorHint="@color/black"
         android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -83,8 +86,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Phone"
-        android:textColorHint="@color/black"
         android:inputType="phone"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

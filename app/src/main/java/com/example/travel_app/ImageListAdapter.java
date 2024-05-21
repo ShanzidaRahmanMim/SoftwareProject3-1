@@ -1,4 +1,4 @@
-package com.example.travel_app.Activities;
+package com.example.travel_app;
 
 import android.content.Context;
 import android.content.Intent;
