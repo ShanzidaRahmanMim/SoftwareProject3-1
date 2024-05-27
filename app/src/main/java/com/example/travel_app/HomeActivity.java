@@ -18,6 +18,28 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
+/**
+ * HomeActivity is the main activity for the travel application, displaying popular tourist spots
+ * and providing navigation to other parts of the app such as the map and review sections.
+ *
+ * @author Hafsa Tazrian
+ * @version 1.0
+ *
+ * @see AppCompatActivity
+ * @see PopularAdapter
+ * @see PopularDomain
+ * @see BottomNavigationView
+ * @see SharedPreferencesManager
+ * @see ImageListAdapter
+ * @see RecyclerView
+ * @see LinearLayoutManager
+ * @see Intent
+ * @see Bundle
+ * @see MenuItem
+ * @see View
+ * @see Button
+ */
+
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -26,6 +48,17 @@ public class HomeActivity extends AppCompatActivity {
     //private ImageListAdapter Adapter;private RecyclerView recyclerView;
     private SharedPreferencesManager sharedPreferencesManager2;
     private BottomNavigationView bottomNavigationView;
+
+    /**
+     * Called when the activity is first created. This is where you should do all of your
+     * normal static set up: create views, bind data to lists, etc. This method also provides
+     * a Bundle containing the activity's previously frozen state, if there was one.
+     *
+     * @param savedInstanceState If the activity is being re-initialized after previously
+     *                           being shut down then this Bundle contains the data it most
+     *                           recently supplied in {@link #onSaveInstanceState(Bundle)}.
+     *                           Note: Otherwise it is null.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +108,11 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
     }
+
+    /**
+     * Initializes the RecyclerView for displaying popular tourist destinations.
+     */
+
     private void initRecyclerView()
     {
         ArrayList<PopularDomain> items =new ArrayList<>();
