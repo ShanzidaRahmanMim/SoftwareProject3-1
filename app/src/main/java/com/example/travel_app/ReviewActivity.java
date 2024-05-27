@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
-//Singleton
+//Factory
 
 import android.content.Context;
 import android.content.SharedPreferences;
